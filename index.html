@@ -135,12 +135,7 @@
     }
       
       function shareMessages(messages) {
-        if (!liff.isInClient()) {
-           Swal.fire("ผิดพลาด", "โปรดใช้เฉพาะมือถือเท่านั้น", "error")
-            console.error("LIFF is not opened inside the LINE app.");
-            return;
-        }
-
+       
         liff.shareTargetPicker(messages).then(function (res) {
     if (res) {
         Swal.fire({
